@@ -37,10 +37,11 @@ public class Deck {
     public Card getcard(){
         if(cards.size() == 0){
             newcards();
+            Shuffle();
+            return cards.remove(0);
         }
         else
             return cards.remove(0);
-        return null;
     }
     public void show(){
         for(int i = 0;i < cards.size();i++){
